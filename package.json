@@ -1,0 +1,7 @@
+{
+  "name": "atomcorp-lite-demo",
+  "private": true,
+  "description": "Small standalone CRM assistant demo with synthetic data",
+  "scripts": {"test": "node --test tests/*.test.cjs", "start": "python3 -m http.server 8080"},
+  "license": "MIT"
+}

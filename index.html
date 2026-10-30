@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AtomCorp Lite — компактная демонстрация CRM с командой ИИ-агентов на вымышленных данных.">
+<title>AtomCorp Lite · агенты и CRM</title><link rel="stylesheet" href="src/app.css">
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#overview"><span class="mark">a</span><span>AtomCorp <small>LITE / DEMO</small></span></a>
+  <div class="workspace">Рабочее пространство<span>Пример компании</span></div>
+  <nav aria-label="Разделы"><button data-view="overview">◫ <span>Обзор</span></button><button data-view="agents">✳ <span>Команда агентов</span></button><button data-view="leads">▤ <span>Лиды и дубли</span></button><button data-view="tasks">☑ <span>Задачи</span></button></nav>
+  <div class="sidebar-note"><span class="dot"></span> Локальная демонстрация<p>Вымышленные данные.<br>Без подключения к CRM и ИИ.</p><button id="reset" class="subtle">Начать заново</button></div>
+</aside>
+<main>
+<header><span id="breadcrumb">Рабочее пространство / Обзор</span><span class="avatar" aria-label="Роль: руководитель">РК</span></header>
+<div class="page-heading"><div><div class="eyebrow">ATOMCORP LITE</div><h1 id="page-title">Сначала внимание.<br>Потом действие.</h1><p id="page-description">Агенты находят проблемы. Вы выбираете следующий шаг.</p></div><button id="run" class="primary">✳ Запустить проверку</button></div>
+<div class="demo-banner">Демонстрация AI-native подхода: агенты → факты → предложение → подтверждение → действие. Ответы заданы сценариями.</div>
+<div id="content"></div>
+<div id="notice" role="status" aria-live="polite"></div>
+</main>
+<dialog id="merge-dialog"><form method="dialog"><span class="eyebrow">ПОДТВЕРЖДЕНИЕ ДЕЙСТВИЯ</span><h2>Объединить дубль?</h2><p id="merge-description"></p><p>Заметки обеих карточек сохранятся. Повторная карточка останется в истории. Изменения затронут только эту демку.</p><div class="dialog-actions"><button value="cancel">Отмена</button><button id="confirm-merge" value="confirm" class="primary">Объединить</button></div></form></dialog>
+<dialog id="reset-dialog"><form method="dialog"><span class="eyebrow">НОВЫЙ СТАРТ</span><h2>Начать демонстрацию заново?</h2><p>Локальные изменения в этой демке будут сброшены. Исходные вымышленные данные восстановятся.</p><div class="dialog-actions"><button value="cancel">Отмена</button><button value="confirm" class="primary">Восстановить пример</button></div></form></dialog>
+<script src="src/core.js"></script><script src="src/data.js"></script><script src="src/app.js"></script>
+</body></html>
